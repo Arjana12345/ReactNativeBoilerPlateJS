@@ -1,9 +1,25 @@
+/*
+import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import HomeContainer from './containers/homeContainer';
 
+
+const Routes = () =>(
+  
+  <Router>
+    <Route path="/" component={HomeContainer} />
+  </Router>
+
+);
+export default Routes;
+*/
+
+/*
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
+export default function Routes() {
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
@@ -20,10 +36,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-
-
-
-// import { AppRegistry } from 'react-native';
-// import { routes as App } from './src';
-
-// AppRegistry.registerComponent('ReactNativeBoilerPlateJS', () => App);
+*/
