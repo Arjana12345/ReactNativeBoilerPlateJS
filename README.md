@@ -11,4 +11,9 @@
                 expo init ReactNativeBoilerPlateJS
                 npm start or expo start
 
+    3) Dependency : npm install --save react-redux
+                    npm install --save redux-thunk
+                    npm install --save redux-logger
+                    npm install --save redux
+
 # Deployment
