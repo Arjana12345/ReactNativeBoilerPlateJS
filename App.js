@@ -1,7 +1,6 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import Home from './src/components/home';
-
+import AppRoutes from './src/routes';
 import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk'
 import logger from 'redux-logger'
@@ -14,6 +13,6 @@ const store = createStore(
 
 export default () => (
   <Provider store={store}>
-    <Home />
+    <AppRoutes />
   </Provider>
 );
