@@ -1,17 +1,31 @@
 import React, { Component } from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, StyleSheet } from 'react-native';
 
 
 export default class Home extends Component {
   
   render() {
+
+    const styles = StyleSheet.create({
+      container: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+      },
+      button: {
+        backgroundColor: 'green',
+        width: '40%',
+        height: 40
+      }
+    });
+
     return (
-      <View>
+      <View style={styles.container}>
 
         <Text>
          Hello World.! 
          </Text>
-         <View>
+         <View style={styles.button}>
             <Button
               title="Go to Login"
               onPress={() => {
@@ -22,7 +36,7 @@ export default class Home extends Component {
               }}
             />
           </View>
-          <View>
+          <View style={styles.button}>
           <Button
             title="Go to Register"
             onPress={() => {
