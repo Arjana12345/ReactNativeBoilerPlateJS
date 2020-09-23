@@ -19,6 +19,8 @@ export default class Home extends Component {
       }
     });
 
+console.log(this.props.propsData);
+
     return (
       <View style={styles.container}>
 
@@ -29,7 +31,7 @@ export default class Home extends Component {
             <Button
               title="Go to Login"
               onPress={() => {
-                this.props.navigation.navigate('Login', {
+                this.props.propsData.navigationData.navigate('Login', {
                   id: 1,
                   otherParam: 'anything you want here',
                 });
@@ -40,7 +42,7 @@ export default class Home extends Component {
           <Button
             title="Go to Register"
             onPress={() => {
-              this.props.navigation.navigate('Register', {
+              this.props.propsData.navigationData.navigate('Register', {
                 id: 1,
                 otherParam: 'anything you want here',
               });
