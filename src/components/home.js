@@ -1,12 +1,21 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { Button } from 'react-native-elements'
+import { ThemeProvider, Button } from 'react-native-elements'
 
 
 export default class Home extends Component {
 
   render() {
-
+    const theme = {
+      Button: {
+     titleStyle: {
+        color: 'green',
+      },
+      buttonStyle:{
+        backgroundColor:'red'
+      },
+    },
+    };
     const styles = StyleSheet.create({
       container: {
         flex: 1,
@@ -14,8 +23,6 @@ export default class Home extends Component {
         justifyContent: 'space-between'
       },
       button: {
-        // backgroundColor: '#FF0000',
-        // borderColor: 'green',
         width: '40%',
         height: 40,
       }
@@ -30,18 +37,17 @@ console.log(this.props.propsData);
          Hello World.! 
          </Text>
          <View style={styles.button}>
+         <ThemeProvider theme={theme}>
             <Button
               title="Go to Login"
-              buttonStyle={{
-                backgroundColor:'red'
-              }}
-              onPress={() => {
+             onPress={() => {
                 this.props.propsData.navigationData.navigate('Login', {
                   id: 1,
                   otherParam: 'anything you want here',
                 });
               }}
             />
+            </ThemeProvider>
           </View>
           <View style={styles.button}>
           <Button
