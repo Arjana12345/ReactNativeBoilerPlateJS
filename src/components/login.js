@@ -5,19 +5,19 @@ import {
   View,
   TextInput,
   ScrollView,
-  Button,
   Alert
   
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { ThemeProvider, Button } from 'react-native-elements'
+import theme from '../template/theme'
 
 
 export default class Login extends Component {
   
   render() {
-    
     console.log(this.props.propsData);
-    console.log("aa");
+
     const styles = StyleSheet.create({
       transparentButton: {
       marginTop: 30,
@@ -96,11 +96,13 @@ export default class Login extends Component {
     return (
       <ScrollView style={styles.scroll}>
       <View style={styles.labelContainer}>
+      <ThemeProvider theme={theme.buttonTheme}>
         <Button 
           title="Forgot Login/Pass"
-          styles={{button: styles.alignRight, label: styles.label}} 
+          //styles={{button: styles.alignRight, label: styles.label}} 
           onPress={() => Alert.alert('Simple Button pressed')}
           />
+      </ThemeProvider>
       </View>
 
       <View style={styles.labelContainer}>
@@ -139,18 +141,22 @@ export default class Login extends Component {
 
         <View style={styles.footer}>
           <View style={styles.labelContainer}>
+          <ThemeProvider theme={theme.buttonTheme}>
               <Button 
                   title="Sign In"
                   styles={{button: styles.primaryButton, textLabel: styles.buttonWhiteText}} 
                   onPress={() => Alert.alert('Simple Button pressed')}
               />
+          </ThemeProvider>
           </View>
           <View style={styles.labelContainer}>
+          <ThemeProvider theme={theme.buttonTheme}>
               <Button 
                   title="CANCEL"
                   styles={{textLabel: styles.buttonBlackText}} 
                   onPress={() => Alert.alert('Simple Button pressed')}
               />
+          </ThemeProvider>
           </View>
       </View>
 

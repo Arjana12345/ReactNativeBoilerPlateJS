@@ -1,21 +1,14 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { ThemeProvider, Button } from 'react-native-elements'
+import theme from '../template/theme'
+
 
 
 export default class Home extends Component {
 
   render() {
-    const theme = {
-      Button: {
-     titleStyle: {
-        color: 'green',
-      },
-      buttonStyle:{
-        backgroundColor:'red'
-      },
-    },
-    };
+
     const styles = StyleSheet.create({
       container: {
         flex: 1,
@@ -37,7 +30,7 @@ console.log(this.props.propsData);
          Hello World.! 
          </Text>
          <View style={styles.button}>
-         <ThemeProvider theme={theme}>
+         <ThemeProvider theme={theme.buttonTheme}>
             <Button
               title="Go to Login"
              onPress={() => {
