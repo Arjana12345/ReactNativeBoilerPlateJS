@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
+import { Button } from 'react-native-elements'
 
 
 export default class Home extends Component {
-  
+
   render() {
 
     const styles = StyleSheet.create({
@@ -13,9 +14,10 @@ export default class Home extends Component {
         justifyContent: 'space-between'
       },
       button: {
-        backgroundColor: 'green',
+        // backgroundColor: '#FF0000',
+        // borderColor: 'green',
         width: '40%',
-        height: 40
+        height: 40,
       }
     });
 
@@ -30,6 +32,9 @@ console.log(this.props.propsData);
          <View style={styles.button}>
             <Button
               title="Go to Login"
+              buttonStyle={{
+                backgroundColor:'red'
+              }}
               onPress={() => {
                 this.props.propsData.navigationData.navigate('Login', {
                   id: 1,
@@ -41,6 +46,9 @@ console.log(this.props.propsData);
           <View style={styles.button}>
           <Button
             title="Go to Register"
+            buttonStyle={{
+              backgroundColor:'red'
+            }}
             onPress={() => {
               this.props.propsData.navigationData.navigate('Register', {
                 id: 1,
