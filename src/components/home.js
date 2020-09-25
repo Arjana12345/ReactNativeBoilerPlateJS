@@ -7,6 +7,8 @@ import theme from '../template/theme'
 
 export default class Home extends Component {
 
+
+
   render() {
 
     const styles = StyleSheet.create({
@@ -18,17 +20,29 @@ export default class Home extends Component {
       button: {
         width: '40%',
         height: 40,
+      },
+      innerText: {
+        color: '#0d8898'
       }
+
     });
+
 
 console.log(this.props.propsData);
 
-    return (
-      <View style={styles.container}>
 
-        <Text>
+
+    return (
+     
+     
+     <View style={styles.container}>
+  
+       <Text style={styles.innerText}>
          Hello World.! 
          </Text>
+   
+       
+     
          <View style={styles.button}>
          <ThemeProvider theme={theme.buttonTheme}>
             <Button

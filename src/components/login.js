@@ -33,7 +33,13 @@ export default class Login extends Component {
             fontWeight: 'bold'
         },
         inline: {
-            flexDirection: 'row'
+            flexDirection: 'row',
+            marginTop: 30,
+            borderColor: '#3B5699',
+            borderWidth: 2,
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: 20
         },
         buttonWhiteText: {
           fontSize: 20,
@@ -81,13 +87,12 @@ export default class Login extends Component {
         fontSize: 30,
         backgroundColor: '#FFF'
       },
-      label: {
-        color: '#0d8898',
-        fontSize: 20
-      },
-      alignRight: {
-          alignSelf: 'flex-end'
-      },
+     
+      innerText: {
+       color: '#0d8898',
+       alignSelf: 'flex-end',
+       fontSize: 20,
+      }
 
 
     });
@@ -95,15 +100,15 @@ export default class Login extends Component {
    
     return (
       <ScrollView style={styles.scroll}>
-      <View style={styles.labelContainer}>
-      <ThemeProvider theme={theme.buttonTheme}>
-        <Button 
-          title="Forgot Login/Pass"
-          //styles={{button: styles.alignRight, label: styles.label}} 
-          onPress={() => Alert.alert('Simple Button pressed')}
-          />
-      </ThemeProvider>
-      </View>
+         <View style={styles.labelContainer}>
+
+            <Text style={styles.innerText} onPress={() => console.log('Forgot Password')}>
+            Forgot Password
+            </Text>
+
+         </View>
+   
+      
 
       <View style={styles.labelContainer}>
           {/* <Label text="Username or Email" /> */}
@@ -132,8 +137,9 @@ export default class Login extends Component {
             > */}
                 <View style={styles.inline}>
                     <Icon name="facebook-official" size={30} color="#3B5699" />
-                    <Text style={[styles.buttonBlueText, styles.buttonBigText]}>  Connect </Text> 
-                    <Text style={styles.buttonBlueText}>with Facebook</Text>
+                    <Text style={[styles.buttonBlueText, styles.buttonBigText]}> Connect with  Facebook </Text> 
+                     {/* <Text style={styles.buttonBlueText}> with  Facebook </Text> */}
+                    
                 </View>
             {/* </Button> */}
         </View>
@@ -141,19 +147,19 @@ export default class Login extends Component {
 
         <View style={styles.footer}>
           <View style={styles.labelContainer}>
-          <ThemeProvider theme={theme.buttonTheme}>
+          <ThemeProvider theme={theme.primaryButton}>
               <Button 
                   title="Sign In"
-                  styles={{button: styles.primaryButton, textLabel: styles.buttonWhiteText}} 
+                  //styles={{button: styles.primaryButton, textLabel: styles.buttonWhiteText}} 
                   onPress={() => Alert.alert('Simple Button pressed')}
               />
           </ThemeProvider>
           </View>
           <View style={styles.labelContainer}>
-          <ThemeProvider theme={theme.buttonTheme}>
+          <ThemeProvider theme={theme.defaultButton}>
               <Button 
                   title="CANCEL"
-                  styles={{textLabel: styles.buttonBlackText}} 
+                  //styles={{textLabel: styles.buttonBlackText}} 
                   onPress={() => Alert.alert('Simple Button pressed')}
               />
           </ThemeProvider>
