@@ -15,7 +15,7 @@ export default class Home extends Component {
       container: {
         flex: 1,
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between' //space-around
       },
       button: {
         width: '40%',
@@ -60,7 +60,7 @@ console.log(this.props.propsData);
           <Button
             title="Go to Register"
             buttonStyle={{
-              backgroundColor:'red'
+              backgroundColor:'green'
             }}
             onPress={() => {
               this.props.propsData.navigationData.navigate('Register', {
