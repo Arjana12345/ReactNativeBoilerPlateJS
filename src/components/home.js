@@ -7,28 +7,42 @@ import theme from '../template/theme'
 
 export default class Home extends Component {
 
+
+
   render() {
 
     const styles = StyleSheet.create({
       container: {
         flex: 1,
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between' //space-around
       },
       button: {
         width: '40%',
         height: 40,
+      },
+      innerText: {
+        color: '#0d8898'
       }
+
     });
+
 
 console.log(this.props.propsData);
 
-    return (
-      <View style={styles.container}>
 
-        <Text>
+
+    return (
+     
+     
+     <View style={styles.container}>
+  
+       <Text style={styles.innerText}>
          Hello World.! 
          </Text>
+   
+       
+     
          <View style={styles.button}>
          <ThemeProvider theme={theme.buttonTheme}>
             <Button
@@ -46,7 +60,7 @@ console.log(this.props.propsData);
           <Button
             title="Go to Register"
             buttonStyle={{
-              backgroundColor:'red'
+              backgroundColor:'green'
             }}
             onPress={() => {
               this.props.propsData.navigationData.navigate('Register', {
