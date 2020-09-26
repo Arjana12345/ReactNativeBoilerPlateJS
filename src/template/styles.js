@@ -1,7 +1,5 @@
-import { RecyclerViewBackedScrollViewComponent } from "react-native";
-
 const styles = {
-
+    
     container: {
         flex: 1,
         flexDirection: 'row',
