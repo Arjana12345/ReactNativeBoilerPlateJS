@@ -1,6 +1,6 @@
 const theme = {
 
-      buttonTheme : {
+  buttonTheme : {
         
             Button: {
               titleStyle: {
