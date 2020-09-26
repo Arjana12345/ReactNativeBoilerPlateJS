@@ -14,7 +14,7 @@ export default class Home extends Component {
   render() {
   console.log(this.props.propsData);
   return (
-      <View>
+    <View >
           <View style = {styles.container}>
               <Text h1>Without css</Text>
               <Text h1 h1Style = {styles.h1}>External css</Text>
@@ -29,8 +29,8 @@ export default class Home extends Component {
               <Text h1 h1Style = {{ color: "green" }}>Internal css</Text>
           </View>
 
-          <View style = {styles.container}>
-            <View style={{marginTop: 20}}>
+          <View style = {styles.buttonContainer}>
+            <View style = {{marginTop: 20}}>
                   <ThemeProvider theme={theme.primaryButton}>
                       <Button
                           title="Go to Login"
@@ -43,8 +43,7 @@ export default class Home extends Component {
                         />
                     </ThemeProvider>
               </View>
-            
-              <View style={{marginTop: 20}}>
+              <View style = {{marginTop: 20}}>
                     <ThemeProvider theme={theme.defaultButton}>
                         <Button
                           title="Go to Register"
@@ -56,8 +55,9 @@ export default class Home extends Component {
                           }}
                         />
                     </ThemeProvider>
-              </View>
-                
+            </View>
+
+                       
           </View>
          
 
@@ -65,7 +65,7 @@ export default class Home extends Component {
       
       
       
-      </View>//main view
+          </View>//main view
  
 
 

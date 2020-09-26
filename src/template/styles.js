@@ -1,9 +1,12 @@
+import { RecyclerViewBackedScrollViewComponent } from "react-native";
+
 const styles = {
 
     container: {
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-between', //space-around
+    
        
    },
 
@@ -21,13 +24,13 @@ const styles = {
 
    buttonStyle:{
     marginTop: '100'
-   }
+   },
 
-
-
-
-
-
+   buttonContainer: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between', //space-around
+   },
 
 };
 export default styles;
