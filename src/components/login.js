@@ -27,25 +27,33 @@ export default class Login extends Component {
    
       
 
-      <View style={styles.labelContainer}>
+      <View style={styles.inputView}>
          
             <Input
-                    placeholder='Username or Email'
-                    errorStyle={{ color: 'red' }}
-                    errorMessage='ENTER A VALID ERROR HERE'
-                    leftIcon={
-                        <Icon
-                        name='user'
-                        size={24}
-                        color='blue'
+                label = "Enter Username or Email"
+                labelStyle = {styles.label}
+                containerStyle = {styles.inputContainer}
+                inputStyle = {styles.inputStyle}
+                placeholder='Username or Email'
+                errorStyle={{ color: 'red' }}
+                errorMessage='ENTER A VALID ERROR HERE'
+                leftIcon={
+                    <Icon
+                    name='user'
+                    size={24}
+                    color='blue'
                     />
-                    
                     }
-                />
+            />
       
       </View> 
-      <View style={styles.labelContainer}>
+
+      <View style={styles.inputView}>
+            
             <Input 
+                label = "Enter Password"
+                labelStyle = {styles.label}
+                containerStyle = {styles.inputContainer}
                 placeholder="Password"
                 secureTextEntry={true} 
                 leftIcon={
@@ -57,40 +65,34 @@ export default class Login extends Component {
                 }
             
             />
+
       </View>
-
-      
-
-      <View style={styles.labelContainer}>
-           
-                <View style={styles.inline}>
-                    <Icon name="facebook-official" size={30} color="#3B5699" />
-                    <Text h2 h2Style = {styles.h2}> Connect</Text>
-                    <Text h3 h3Style = {styles.h3}> with  Facebook</Text>
-                   
-                </View>
-           
+    
+        <View style={styles.inline}>
+            <Icon name="facebook-official" size={30} color="#3B5699" />
+            <Text h2 h2Style = {styles.h2}> Connect</Text>
+            <Text h3 h3Style = {styles.h3}> with  Facebook</Text>
+            
         </View>
-
-
+           
         <View style={styles.footer}>
-            <View style={styles.labelContainer}>
+           
                 <ThemeProvider theme={theme.primaryButton}>
                     <Button 
                         title="Sign In"
+                        style = {{marginBottom: 20}} 
                         onPress={() => Alert.alert('Simple Button pressed')}
                     />
                 </ThemeProvider>
-            </View>
-            <View style={styles.labelContainer}>
+            
                 <ThemeProvider theme={theme.defaultButton}>
                     <Button 
                         title="CANCEL"
-                        //styles={{textLabel: styles.buttonBlackText}} 
+                        style = {{marginBottom: 20}}
                         onPress={() => Alert.alert('Simple Button pressed')}
                     />
                 </ThemeProvider>
-            </View>
+            
       </View>
 
       </ScrollView>

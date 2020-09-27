@@ -59,11 +59,9 @@ const styles = {
       },
      
       footer: {
-        marginTop: 100
-      },
-      labelContainer: {
-        marginBottom: 20
-    },
+          marginTop: 100
+        },
+    
   
       textLabel: {
         fontSize: 20,
@@ -71,42 +69,51 @@ const styles = {
         fontFamily: 'Verdana',
         marginBottom: 10,
         color: '#595856'
-    }, 
-      scroll: {
-        backgroundColor: '#E1D7D8',
-        padding: 30,
-        flexDirection: 'column'
-    },
+        }, 
+
+          scroll: {
+            backgroundColor: '#E1D7D8',
+            padding: 30,
+            flexDirection: 'column'
+        },
+
       label: {
         color: '#0d8898',
-        fontSize: 20
+        fontSize: 20,
+        fontWeight: 'bold',
+        fontFamily: 'Verdana',
+        marginBottom: 5,
         },
+
         alignRight: {
             alignSelf: 'flex-end'
         },
-        textInput: {
-          height: 80,
-          fontSize: 30,
-          backgroundColor: '#FFF'
+        
+        
+        inputView: {
+          flex:1,
+          justifyContent:"center",
+          alignItems:"center",
+          marginTop:20
+        },
+
+        inputContainer: {
+          borderWidth: 1,
+          borderColor: '#3B5699',
+          alignItems: 'stretch',
+          backgroundColor: '#FFF',
+          //height: 80,
+          borderWidth: 2
+        },
+
+        inputStyle: {
+          flex: 1,
+          fontFamily: 'Verdana',
+          fontSize: 20,
+          paddingVertical: 10,
+          
         },
    
-
-        buttonBlueText: {
-         
-            fontSize: 20,
-            color: '#3B5699'
-           
-        },
-
-        buttonBigText: {
-
-             
-                fontSize: 20,
-                fontWeight: 'bold'
-             
-        },
-
-
 
 
 };
