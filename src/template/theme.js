@@ -44,28 +44,7 @@ const theme = {
 
     },
 
-
-    transparentButton: {
-
-      Button: {
-        
-            titleStyle: {
-              fontSize: 20,
-              color: '#595856'
-            },
-
-      }
-
-    }
+       
 
 };
 export default theme;
-
-/*
-
-marginTop: 30,
-borderColor: '#3B5699',
-borderWidth: 2
-      
-
-*/
