@@ -58,7 +58,7 @@ const styles = {
           padding: 20
       },
      
-      footer: {
+      loginFooter: {
           marginTop: 100
         },
     

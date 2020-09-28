@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
   View,
   ScrollView,
-  Alert,
+
   
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -16,9 +16,10 @@ export default class Login extends Component {
   render() {
     console.log(this.props.propsData);
     return (
-      <ScrollView style={styles.scroll}>
-         <View style={styles.labelContainer}>
-
+   <ScrollView style={styles.scroll}>
+   
+         <View>
+       
             <Text style={styles.endText} onPress={() => console.log('Forgot Password')}>
             Forgot Password
             </Text>
@@ -75,13 +76,13 @@ export default class Login extends Component {
             
         </View>
            
-        <View style={styles.footer}>
+        <View style={styles.loginFooter}>
            
                 <ThemeProvider theme={theme.primaryButton}>
                     <Button 
                         title="Sign In"
                         style = {{marginBottom: 20}} 
-                        onPress={() => Alert.alert('Simple Button pressed')}
+                        onPress={() => alert('Simple Button pressed')}
                     />
                 </ThemeProvider>
             
@@ -89,7 +90,7 @@ export default class Login extends Component {
                     <Button 
                         title="CANCEL"
                         style = {{marginBottom: 20}}
-                        onPress={() => Alert.alert('Simple Button pressed')}
+                        onPress={() => alert('Simple Button pressed')}
                     />
                 </ThemeProvider>
             
