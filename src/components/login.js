@@ -15,12 +15,19 @@ export default class Login extends Component {
   
   render() {
     console.log(this.props.propsData);
+    const { navigate } = this.props.propsData.navigationData;
+      
+    function handleClick () {
+          navigate('ForgotPassword');
+        
+      }
+
     return (
    <ScrollView style={styles.scroll}>
    
          <View>
        
-            <Text style={styles.endText} onPress={() => console.log('Forgot Password')}>
+            <Text style={styles.endText}  onPress={handleClick} >
             Forgot Password
             </Text>
 
