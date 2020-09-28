@@ -12,8 +12,13 @@ class LoginContainer extends React.Component{
       super(props);
       
    }
-
+  
    render() {
+
+      // function handleChange()
+      // {
+      //    alert('handleOnChange Called');
+      // }
      
         console.log(this.props.testData);
         console.log(this.props.navigation);
@@ -23,7 +28,7 @@ class LoginContainer extends React.Component{
         }
          return (
          <View>
-            <Login propsData = {propsData}/>
+            <Login propsData = {propsData} />
          </View>
          );
       }

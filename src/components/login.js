@@ -22,6 +22,11 @@ export default class Login extends Component {
         
       }
 
+      function handleChange () {
+       alert('handleChange');
+      
+    }
+
     return (
    <ScrollView style={styles.scroll}>
    
@@ -52,6 +57,9 @@ export default class Login extends Component {
                     color='blue'
                     />
                     }
+               onChange={handleChange} 
+               
+
             />
       
       </View> 
