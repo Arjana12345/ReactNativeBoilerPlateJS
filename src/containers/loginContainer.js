@@ -14,15 +14,18 @@ class LoginContainer extends React.Component{
       
    }
   
-    handleChange = (event) => {
-      console.log(event.target.name);
-      console.log(event.target.value);
-      console.log(event.target.type);
+ 
+      handleChange = e => {
+         e.preventDefault();
+      
+      console.log(e.target.name);
+      console.log(e.target.value);
+      console.log(e.target.type);
       console.log('handleOnChange Called');
-      let payload = {fieldName: event.target.name,
-                     fieldValue: event.target.value
+      let payload = {fieldName: e.target.name,
+                     fieldValue: e.target.value
                    };
-      this.props.handleChangeAction(payload);
+      this.props.handleChange(payload);
 
   }
   
@@ -52,7 +55,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch) => ({
   
-   handleChangeAction: (payload) => dispatch(test(payload))
+   handleChange: (payload) => dispatch(test(payload))
    
  })
 

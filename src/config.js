@@ -2,7 +2,7 @@
 export default {
     API : {
       
-        getInfo : 'http://localhost/reactApp/firstReactApp/backend/test.php',
+        getInfo : 'http://localhost/reactNative/ReactNativeBoilerPlateJS/backend/test.php',
      
         getUsers : 'https://localhost/test.php'
     }
