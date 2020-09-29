@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { View } from 'react-native';
 
-import { test } from '../actions/indexAction';
+import { test } from '../actions/loginAction';
 import Login from '../components/login';
 
 
