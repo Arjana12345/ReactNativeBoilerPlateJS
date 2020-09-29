@@ -1,8 +1,8 @@
-export default (state = [], action) => {
-    switch (action.type) {
-      case "TEST":
-        return state;
-      default:
-        return state;
-    }
-  };
+import { combineReducers } from 'redux';
+import loginReducer from './loginReducer';
+
+const rootReducer = combineReducers({
+    loginReducer: loginReducer
+});
+
+export default rootReducer;

@@ -19,6 +19,11 @@ class LoginContainer extends React.Component{
       console.log(event.target.value);
       console.log(event.target.type);
       console.log('handleOnChange Called');
+      let payload = {fieldName: event.target.name,
+                     fieldValue: event.target.value
+                   };
+      this.props.handleChangeAction(payload);
+
   }
   
    render() {
@@ -47,7 +52,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch) => ({
   
-   //handleClick: (payload) => dispatch(test(payload))
+   handleChangeAction: (payload) => dispatch(test(payload))
    
  })
 
