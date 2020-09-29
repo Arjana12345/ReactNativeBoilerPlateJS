@@ -2,35 +2,45 @@ import React, { Component } from 'react';
 import {
   View,
   ScrollView,
-
+  TouchableOpacity,
+  TextInput
   
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { ThemeProvider, Button, Text, Input, } from 'react-native-elements';
 import theme from '../template/theme';
 import styles from '../template/styles';
+import { Field, reduxForm } from 'redux-form'
 
 
-export default class Login extends Component {
+
+class Login extends Component {
 
 
-  onFieldChange(event) {
-    // for a regular input field, read field name and value from the event
-    this.props.onChange(event);
-}
+    onFieldChange(event) {
+      // for a regular input field, read field name and value from the event
+      this.props.onChange(event);
+  }
+  handleSubmit(values){
+    console.log('submitting form', values)
+  }
+ 
   render() {
     console.log(this.props.propsData);
     const { navigate } = this.props.propsData.navigationData;
-      
+    const renderInput = ({ input: { onChange, ...restInput }}) => {
+      return <TextInput  style={styles.input} onChangeText={onChange} {...restInput} />
+    }
+    console.log(renderInput);
     function handleClick () {
           navigate('ForgotPassword');
         
       }
-
+      const { submit } = this.props.propsData;
 
     return (
    <ScrollView style={styles.scroll}>
-   
+  
          <View>
        
             <Text style={styles.endText}  onPress={handleClick} >
@@ -74,6 +84,7 @@ export default class Login extends Component {
                 labelStyle = {styles.label}
                 containerStyle = {styles.inputContainer}
                 placeholder="Password"
+                name="password"
                 secureTextEntry={true} 
                 leftIcon={
                     <Icon
@@ -84,6 +95,7 @@ export default class Login extends Component {
                 }
             
             />
+           
 
       </View>
     
@@ -95,13 +107,16 @@ export default class Login extends Component {
         </View>
            
         <View style={styles.loginFooter}>
-           
+        <Field name="x" component={renderInput} />
                 <ThemeProvider theme={theme.primaryButton}>
-                    <Button 
+                <TouchableOpacity onPress={this.handleSubmit(submit)}>
+                        {/* <Text style={styles.button}>Submit</Text> */}
+                        <Button 
                         title="Sign In"
                         style = {{marginBottom: 20}} 
-                        onPress={() => alert('Simple Button pressed')}
-                    />
+                        />
+
+               </TouchableOpacity>
                 </ThemeProvider>
             
                 <ThemeProvider theme={theme.defaultButton}>
@@ -113,8 +128,12 @@ export default class Login extends Component {
                 </ThemeProvider>
             
       </View>
-
+   
       </ScrollView>
     );
   }
 }
+
+export default reduxForm({
+  form: 'LoginForm'
+})(Login)

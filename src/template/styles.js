@@ -113,6 +113,14 @@ const styles = {
           paddingVertical: 10,
           
         },
+
+        input: {
+          borderColor: 'black',
+          borderWidth: 1,
+          height: 37,
+          width: 250,
+          backgroundColor: '#FFF',
+        }
    
 
 

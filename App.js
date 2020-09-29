@@ -6,6 +6,7 @@ import thunk from 'redux-thunk'
 import logger from 'redux-logger'
 import rootReducer from './src/reducers/indexReducer'
 
+
 const store = createStore(
   rootReducer,
   applyMiddleware(thunk,logger)
