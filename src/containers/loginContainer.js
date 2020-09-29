@@ -10,16 +10,19 @@ class LoginContainer extends React.Component{
 
    constructor(props) {
       super(props);
+   
       
    }
   
+    handleChange = (event) => {
+      console.log(event.target.name);
+      console.log(event.target.value);
+      console.log(event.target.type);
+      console.log('handleOnChange Called');
+  }
+  
    render() {
 
-      // function handleChange()
-      // {
-      //    alert('handleOnChange Called');
-      // }
-     
         console.log(this.props.testData);
         console.log(this.props.navigation);
         let propsData = {
@@ -28,7 +31,7 @@ class LoginContainer extends React.Component{
         }
          return (
          <View>
-            <Login propsData = {propsData} />
+            <Login propsData = {propsData} onChange={this.handleChange.bind(this)} />
          </View>
          );
       }

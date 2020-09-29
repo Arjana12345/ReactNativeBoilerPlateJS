@@ -12,7 +12,12 @@ import styles from '../template/styles';
 
 
 export default class Login extends Component {
-  
+
+
+  onFieldChange(event) {
+    // for a regular input field, read field name and value from the event
+    this.props.onChange(event);
+}
   render() {
     console.log(this.props.propsData);
     const { navigate } = this.props.propsData.navigationData;
@@ -22,10 +27,6 @@ export default class Login extends Component {
         
       }
 
-      function handleChange () {
-       alert('handleChange');
-      
-    }
 
     return (
    <ScrollView style={styles.scroll}>
@@ -48,6 +49,7 @@ export default class Login extends Component {
                 containerStyle = {styles.inputContainer}
                 inputStyle = {styles.inputStyle}
                 placeholder='Username or Email'
+                name="username"
                 errorStyle={{ color: 'red' }}
                 errorMessage='ENTER A VALID ERROR HERE'
                 leftIcon={
@@ -57,8 +59,9 @@ export default class Login extends Component {
                     color='blue'
                     />
                     }
-               onChange={handleChange} 
-               
+               //onChange={this.props.handleChange} 
+               onChange={this.onFieldChange.bind(this)} 
+                  
 
             />
       
