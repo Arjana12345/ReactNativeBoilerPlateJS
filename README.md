@@ -19,5 +19,6 @@
                     5) npm install @react-navigation/stack
                     6) npm install @react-navigation/native
                     7) npm install --save axios
+                    8) npm install --save redux-form
 
 # Deployment
