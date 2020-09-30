@@ -13,33 +13,40 @@ class LoginContainer extends React.Component{
    
       
    }
-  
- 
-      handleChange = e => {
-         e.preventDefault();
-      
-      console.log(e.target.name);
-      console.log(e.target.value);
-      console.log(e.target.type);
-      console.log('handleOnChange Called');
-      let payload = {fieldName: e.target.name,
-                     fieldValue: e.target.value
-                   };
+
+   handleChange = (e) => {
+
+      let payload = {
+         fieldName : e.target.name,
+         fieldValue : e.target.value
+      };
+
       this.props.handleChange(payload);
 
-  }
+   }
+   handleSubmit =() => {
+     
+      console.log(this.props.testData.form.LoginForm);
+      console.log('handleSubmit ctrl');
+      /**
+       * We can fire action here:
+       */
+   
+      //this.props.handleSubmit(this.props.testData.form.LoginForm);
+
+   }
   
    render() {
 
-        console.log(this.props.testData);
-        console.log(this.props.navigation);
+        //console.log(this.props.testData);
+        //console.log(this.props.navigation);
         let propsData = {
             stateData : this.props.testData,
             navigationData : this.props.navigation
         }
          return (
          <View>
-            <Login propsData = {propsData} onChange={this.handleChange.bind(this)} />
+            <Login propsData = {propsData} onClick={this.handleSubmit.bind(this)} />
          </View>
          );
       }
